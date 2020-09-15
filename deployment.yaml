@@ -13,7 +13,7 @@ spec:
         app: belajar-apache-kafka
     spec:
       containers:
-        - name: kafka-docker
-          image: artdengun/kafka-docker
+        - name: apache-kafka-docker
+          image: artdengun/apache-kafka-docker
           ports:
             - containerPort: 80
