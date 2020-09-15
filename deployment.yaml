@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: Belajar-apache-kafka
+spec:
+  selector:
+    matchLabels:
+      app: belajar-apache-kafka
+  replicas: 5 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: belajar-apache-kafka
+    spec:
+      containers:
+        - name: kafka-docker
+          image: artdengun/kafka-docker
+          ports:
+            - containerPort: 80
